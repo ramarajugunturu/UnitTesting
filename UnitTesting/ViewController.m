@@ -410,7 +410,7 @@
     {
         jsonArray = (NSMutableArray *)[NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
         //===========
-        [self serializeAppInfos:jsonArray];
+        //[self serializeAppInfos:jsonArray];
         //===========
         
     }
