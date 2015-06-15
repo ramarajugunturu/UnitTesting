@@ -7,6 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+//=========================================================================
+#import "WXViewController.h"
+#import <TSMessage.h>
+//Note:-Sharp-eyed readers will note that WXController is imported with quotes, while TSMessage is imported with angle brackets. What gives?
+//Look back to when you created the Podfile; you imported TSMessage with Cocoapods. Cocoapods created the TSMessage Pod project and added it to your workspace. Since you’re importing from other projects in the workspace, you use angle brackets instead of quotes.
+//=========================================================================
 
 @interface AppDelegate ()
 
@@ -17,6 +24,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //===============
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // 1
+    self.window.rootViewController = [[ViewController alloc] init];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    // 2
+    [TSMessage setDefaultViewController: self.window.rootViewController];
+    //===============
     return YES;
 }
 

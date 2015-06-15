@@ -6,6 +6,9 @@
 //  Copyright (c) 2015 Rama Gunturu. All rights reserved.
 //
 
+
+//Sample Json
+//http://api.wipmania.com/json
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
